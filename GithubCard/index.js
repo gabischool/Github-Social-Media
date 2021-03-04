@@ -1,21 +1,24 @@
+
 /*
   STEP 1: using axios, send a GET request to the following URL
     (replacing the placeholder with your Github name):
     https://api.github.com/users/<your name>
 */
 
+
+
 /*
   STEP 2: Inspect and study the data coming back, this is YOUR
     github info! You will need to understand the structure of this
     data in order to use it to build your component function
 
-    Skip to STEP 3.
 */
 
 /*
-  STEP 4: Pass the data received from Github into your function,
+  STEP 3: Pass the data received from Github into your function,
     and append the returned markup to the DOM as a child of .cards
 */
+
 
 /*
   STEP 5: Now that you have your own card getting added to the DOM, either
@@ -50,7 +53,3 @@ const followersArray = [];
     </div>
 */
 
-/*
-  Gabi School Instructor Github username's:
-    duraanali
-*/

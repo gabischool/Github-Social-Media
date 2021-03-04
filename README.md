@@ -4,9 +4,6 @@ In this project we are going to be accessing the GitHub API and building a socia
 
 ## Need to know
 
-* Adding dependencies to a project:
-  * Via script element
-  * Using npm
 * JavaScript:
   * Creating DOM components with Javascript Functions
   * Utilizing 3rd party libraries (Axios)
@@ -32,25 +29,6 @@ In this project we are going to be accessing the GitHub API and building a socia
 **Follow these steps for completing your project.**
 
 * [ ] Submit a Pull-Request to merge `<firstName-lastName>` Branch into `main` (student's  Repo). **Please don't merge your own pull request**
-
-### Project Setup
-
-* [ ] Navigate to the root of the project with your command line.
-* [ ] Run `npm install` to download any dependencies listed in the `package.json` file.
-* [ ] Run `npm start` to compile your project and launch a development server.
-
-### Axios Setup
-
-#### Option 1 (adding Axios via script element)
-
-* [ ] Include the script element linking the `axios` library in your HTML.
-* [ ] If you do not remember the code you can find it [here](https://github.com/axios/axios).
-
-#### Option 2 (installing Axios with npm)
-
-* [ ] Navigate to the root of the project with your command line.
-* [ ] Run `npm install axios` to download the dependency (it will be added to the `package.json` file).
-* [ ] At the top of the `GitHubCard/index.js` file, type `import axios from 'axios';`
 
 ### Part 1: Requesting Data from the GitHub API
 
