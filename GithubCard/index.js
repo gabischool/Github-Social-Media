@@ -51,6 +51,58 @@
     Using that array, iterate over it, requesting data for each user, creating a new card for each user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+function mycard(cardContent) {
+  const newCard = document.createElement("div"),
+    newImage = document.createElement("img"),
+    CardInfor = document.createElement("div"),
+    myName = document.createElement("h3"),
+    username = document.createElement("p"),
+    location = document.createElement("p"),
+    profile = document.createElement("p"),
+    Followers = document.createElement("p"),
+    Following = document.createElement("p"),
+    Bio = document.createElement("p");
+
+  myName.textContent = cardContent.name;
+  username.textContent = cardContent.login;
+  newImage.src = cardContent.avatar_url;
+  location.textContent = cardContent.location;
+  profile.textContent = cardContent.html_url;
+  Followers.textContent = cardContent.followers;
+  Following.textContent = cardContent.following;
+  Bio.textContent = cardContent.bio;
+
+  newCard.classList.add("card");
+  CardInfor.classList.add("card-info");
+  myName.classList.add("name");
+  username.classList.add("username");
+
+  newCard.appendChild(newImage);
+  newCard.appendChild(CardInfor);
+  CardInfor.appendChild(myName);
+  CardInfor.appendChild(username);
+  CardInfor.appendChild(location);
+  CardInfor.appendChild(profile);
+  CardInfor.appendChild(Followers);
+  CardInfor.appendChild(Following);
+  CardInfor.appendChild(Bio);
+
+  return newCard;
+}
+
+let cards = document.querySelector(".cards");
+
+axios
+  .get("https://api.github.com/users/abdinuur10")
+  .then((res) => {
+    console.log(res.data);
+
+    cards.appendChild(mycard(res.data));
+  })
+
+  .catch((error) => {
+    console.log("Unexpected eroor, try agian", error);
+  });
+
 
 
