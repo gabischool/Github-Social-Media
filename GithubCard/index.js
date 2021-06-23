@@ -51,6 +51,86 @@
     Using that array, iterate over it, requesting data for each user, creating a new card for each user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+function gitmaker(data) {
+
+    //step1: create elements
+  const main = document.createElement('div')
+  const Profileimage = document.createElement('img')
+  const info = document.createElement('div')
+  const Profilename = document.createElement('h3')
+  const username = document.createElement('p')
+  const location = document.createElement('p')
+  const followers = document.createElement('p')
+
+ //step2: connect elements
+  main.appendChild(Profileimage)
+  main.appendChild(info)
+  info.appendChild(Profilename)
+  info.appendChild(username)
+  info.appendChild(location)
+  info.appendChild(followers)
+
+  //step3: add classes
+
+    main.classList.add("card")
+    info.classList.add("card-info")
+    Profilename.classList.add("name")
+    username.classList.add("username")
+  
+    //step4: add content  
+      Profileimage.src= data.avatar_url 
+      Profilename.textContent = data.name
+      username.textContent = data.login
+      location.textContent = data.location
+      followers.textContent = data.followers
+      
+
+      return main
+ 
+}
+
+let maan = document.querySelector(".cards")
+axios.get("https://api.github.com/users/Buushe")
+.then(function(respond){
+  maan.appendChild(gitmaker(respond.data))
+})
 
 
+.catch(function(err){
+  console.log(err)
+})
+
+
+let man = document.querySelector(".cards")
+axios.get("https://api.github.com/users/duraanali")
+.then(function(respond){
+  man.appendChild(gitmaker(respond.data))
+})
+
+
+.catch(function(err){
+  console.log(err)
+})
+
+let min = document.querySelector(".cards")
+axios.get("https://api.github.com/users/AbdirisakAhmed")
+.then(function(respond){
+  min.appendChild(gitmaker(respond.data))
+})
+
+
+.catch(function(err){
+  console.log(err)
+})  
+
+let mn = document.querySelector(".cards")
+axios.get("https://api.github.com/users/abdihakim98")
+.then(function(respond){
+  mn.appendChild(gitmaker(respond.data))
+})
+
+
+.catch(function(err){
+  console.log(err)
+})    
+ 
